@@ -1,5 +1,6 @@
-package com.example.kotlinpoker
+package com.example.kotlinpoker.repositories
 
+import com.example.kotlinpoker.entities.Article
 import org.springframework.data.repository.CrudRepository
 
 interface ArticleRepository : CrudRepository<Article, Long> {
@@ -7,6 +8,3 @@ interface ArticleRepository : CrudRepository<Article, Long> {
     fun findAllByOrderByAddedAtDesc(): Iterable<Article>
 }
 
-interface UserRepository : CrudRepository<User, Long> {
-    fun findByLogin(login: String): User?
-}

@@ -1,5 +1,6 @@
-package com.example.kotlinpoker
+package com.example.kotlinpoker.entities
 
+import com.example.kotlinpoker.toSlug
 import java.time.LocalDateTime
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -17,11 +18,3 @@ class Article(
         @Id @GeneratedValue var id: Long? = null
 )
 
-@Entity
-class User(
-        var login: String,
-        var firstname: String,
-        var lastname: String,
-        var description: String? = null,
-        @Id @GeneratedValue var id: Long? = null
-)

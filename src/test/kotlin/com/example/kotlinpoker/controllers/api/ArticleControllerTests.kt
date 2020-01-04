@@ -1,5 +1,9 @@
-package com.example.kotlinpoker
+package com.example.kotlinpoker.controllers.api
 
+import com.example.kotlinpoker.entities.Article
+import com.example.kotlinpoker.entities.User
+import com.example.kotlinpoker.repositories.ArticleRepository
+import com.example.kotlinpoker.repositories.UserRepository
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import org.junit.jupiter.api.Test
@@ -11,7 +15,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 @WebMvcTest
-class ApiControllersTests(@Autowired val mockMvc: MockMvc) {
+class ArticleControllerTests(@Autowired val mockMvc: MockMvc) {
 
     @MockkBean
     private lateinit var userRepository: UserRepository
