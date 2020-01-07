@@ -15,7 +15,7 @@ class UserRepositoryTests @Autowired constructor(
 
     @Test
     fun `When findByLogin then return User`() {
-        val user = User("springdude", "dude", "guy")
+        val user = User("springdude")
         entityManager.persist(user)
         entityManager.flush()
 
